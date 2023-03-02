@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </nav>
+    <section class="hero">
+      <img
+        src="images/1.png"
+        class="translateX"
+        data-speed="0.25"
+        id="moon"
+        alt=""
+      />
+      <img
+        src="images/2.png"
+        class="translateY"
+        data-speed="0.35"
+        id="clouds"
+        alt=""
+      />
+      <img
+        src="images/3.png"
+        class="translateY"
+        data-speed="0.15"
+        id="mount"
+        alt=""
+      />
+      <h1 id="text" class="translateX" data-speed="-3">
+        Discover New Horizons
+      </h1>
+      <a href="#" id="btn">Explore</a>
+      <img
+        src="images/4.png"
+        class="translateY"
+        data-speed="0"
+        id="base"
+        alt=""
+      />
+    </section>
+    <section id="about" class="section-padding">
+      <div class="container grid">
+        <div class="left-content">
+          <h4>
+            The versatile design of the Cragsmith offers easy access to the
+            contents from both the top and rear insert.
+          </h4>
+        </div>
+        <div class="right-content">
+          <img src="images/about-1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="container grid">
+        <div class="left-content">
+          <h5 class="heading">Durable fabric and foam inserts</h5>
+          <p>
+            Sturdy nylon with thick full foam padding to protect your gear 360 °
+          </p>
+        </div>
+        <div class="right-content">
+          <h5 class="heading">Double opening</h5>
+          <p>
+            U-shaped closure simplifies access from above; the rear insert opens
+            to offer access to the main compartment
+          </p>
+        </div>
+      </div>
+      <div class="container grid">
+        <div class="left-content">
+          <img src="images/about-2.jpg" alt="" />
+        </div>
+        <div class="right-content">
+          <img src="images/about-3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="container grid">
+        <div class="left-content">
+          <h5 class="heading">Elasticated side pockets</h5>
+          <p>
+            Roomy external stretch pockets for water bottles or tourist guides
+          </p>
+        </div>
+        <div class="right-content">
+          <h5 class="heading">100% enveloping and flexible</h5>
+          <p>
+            2.5cm recycled nylon; aluminum buckle with anodized anti-corrosion
+            treatment
+          </p>
+        </div>
+      </div>
+      <div class="container grid">
+        <div class="left-content">
+          <img src="images/about-4.jpg" alt="" />
+        </div>
+        <div class="right-content">
+          <h4>
+            100% nylon (50% recycled, 50% remaining high strength) 251g / m² 630
+            denier plain weave fabric.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <a href="#">
+          <img src="images/logo.png" alt="" />
+        </a>
+      </div>
+    </footer>
+    <script>
+      const translateX = document.querySelectorAll(".translateX");
+      const translateY = document.querySelectorAll(".translateY");
+      window.addEventListener("scroll", () => {
+        let scroll = window.pageYOffset;
+        translateX.forEach((element) => {
+          let speed = element.dataset.speed;
+          element.style.transform = `translateX(${scroll * speed}px)`;
+        });
+        translateY.forEach((element) => {
+          let speed = element.dataset.speed;
+          element.style.transform = `translateY(${scroll * speed}px)`;
+        });
+      });
+    </script>
+  </body>
+</html>
